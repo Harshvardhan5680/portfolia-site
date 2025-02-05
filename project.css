@@ -247,7 +247,42 @@ html {
   html.w-mod-touch * {
     background-attachment: scroll !important;
   }
-  
+  /* Default Navbar Styles */
+.nav-container-big {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 10px 20px;
+}
+
+/* Hide the menu on small screens */
+@media (max-width: 768px) {
+    .nav-container-big {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    /* Show the menu when active */
+    .nav-container-big.nav-active {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: white;
+    }
+}
   .w-block {
     display: block;
   }
